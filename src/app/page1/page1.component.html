@@ -1,0 +1,8 @@
+<h2>Page 1</h2>
+
+<p>The counter: {{ facade.counter$ | async }}</p>
+
+<div class="buttons">
+  <button mat-raised-button (click)="facade.increment()">Increment</button>
+  <button mat-raised-button (click)="facade.decrement()">Decrement</button>
+</div>

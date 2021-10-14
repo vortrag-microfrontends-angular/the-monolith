@@ -11,6 +11,23 @@
         },
         "@schematics/angular:application": {
           "strict": true
+        },
+        "@ngrx/schematics:reducer": {
+          "api": false,
+          "flat": false,
+          "creators": true,
+          "skipTests": true
+        },
+        "@ngrx/schematics:action": {
+          "api": false,
+          "flat": false,
+          "creators": true,
+          "prefix": "load",
+          "skipTests": true
+        },
+        "@ngrx/schematics:selector": {
+          "flat": false,
+          "skipTests": true
         }
       },
       "root": "",
@@ -26,15 +43,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
-            ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
             "scripts": [],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
@@ -97,10 +107,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
@@ -108,6 +115,6 @@
   },
   "defaultProject": "the-monolith",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@ngrx/schematics"
   }
 }

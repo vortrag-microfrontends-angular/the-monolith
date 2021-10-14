@@ -8,11 +8,12 @@
         "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
-      "plugins": ["simple-import-sort", "import"],
+      "plugins": ["simple-import-sort", "import", "ngrx"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "prettier"
+        "prettier",
+        "plugin:ngrx/recommended"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -31,6 +32,8 @@
             "style": "kebab-case"
           }
         ],
+
+        "@typescript-eslint/explicit-member-accessibility": ["error", { "overrides": { "constructors": "no-public" } }],
 
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
