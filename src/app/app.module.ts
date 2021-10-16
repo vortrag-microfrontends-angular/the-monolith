@@ -1,4 +1,5 @@
 import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CounterModule } from './store/counter/counter.module';
+import { JokeModule } from './store/joke/joke.module';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -24,6 +26,7 @@ import { CounterModule } from './store/counter/counter.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -41,6 +44,7 @@ import { CounterModule } from './store/counter/counter.module';
     EffectsModule.forRoot([]),
 
     CounterModule,
+    JokeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

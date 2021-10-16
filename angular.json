@@ -28,6 +28,12 @@
         "@ngrx/schematics:selector": {
           "flat": false,
           "skipTests": true
+        },
+        "@ngrx/schematics:feature": {
+          "api": true,
+          "flat": false,
+          "creators": true,
+          "skipTests": true
         }
       },
       "root": "",

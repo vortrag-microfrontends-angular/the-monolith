@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { CounterFacade } from '../store/counter/counter.facade';
+import { CounterFacade } from '../../store/counter/counter.facade';
 
 @Component({
   selector: 'app-page1',
