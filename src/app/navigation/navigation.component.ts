@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+import { NavigationService } from '../services/navigation.service';
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -14,5 +16,8 @@ export class NavigationComponent {
     shareReplay()
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    public readonly navigationService: NavigationService,
+    private readonly breakpointObserver: BreakpointObserver
+  ) {}
 }
